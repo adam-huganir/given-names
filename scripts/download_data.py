@@ -33,7 +33,7 @@ USER_AGENT = (
     f"bb-names-diminutives-script/0.1 (https://github.com/your-repo; your-email) httpx/{httpx.__version__} "
     f"python/{sys.version_info.major}.{sys.version_info.minor}"
 )
-OUTPUT_DIR = Path("./gen")
+OUTPUT_DIR = Path(f"{Path(__file__).parent}/output")
 REQUEST_DELAY_SECONDS = 3  # Be nice to Wiktionary
 MAX_TITLES_PER_REQUEST = 30  # MediaWiki API limit is often 50, but let's be conservative
 CONCURRENT_CONNECTIONS = asyncio.Semaphore(4)
